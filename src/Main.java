@@ -49,7 +49,7 @@ public class Main {
 
     }
 
-    public static String calcArab(char[] c) { // метод вызывающий арабский калькулятор
+    private static String calcArab(char[] c) { // метод вызывающий арабский калькулятор
         for (char c1 : c) {
             for (RimEnum value : RimEnum.values()) {
                 if (String.valueOf(c1).equals(value.name())){
