@@ -1,3 +1,5 @@
+package Exception;
+
 public class NotMathOperException extends RuntimeException {
     private String  message = "строка не является математической операцией";
 

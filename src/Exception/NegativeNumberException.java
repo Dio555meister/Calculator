@@ -1,3 +1,5 @@
+package Exception;
+
 public class NegativeNumberException extends RuntimeException{
     private String message = " в римской системе нет отрицательных чисел";
 

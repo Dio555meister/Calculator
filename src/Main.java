@@ -1,4 +1,6 @@
+import Exception.*;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -49,7 +51,7 @@ public class Main {
 
     public static String calcArab(char[] c) { // метод вызывающий арабский калькулятор
         for (char c1 : c) {
-            for (Rim value : Rim.values()) {
+            for (RimEnum value : RimEnum.values()) {
                 if (String.valueOf(c1).equals(value.name())){
                     throw new DeffernfFormatException();
                 }
@@ -172,7 +174,7 @@ public class Main {
         int s1 = 0; // присваиваем из энама числа в эти переменные
         int s2 = 0; // присваиваем из энама числа в эти переменные
 
-        for (Rim value : Rim.values()) { // проходимся по массиву энами и присваиваем эти значения в переменную value, которую создали
+        for (RimEnum value : RimEnum.values()) { // проходимся по массиву энами и присваиваем эти значения в переменную value, которую создали
             if (n1.equals(value.name())){ //если n1 = названию энама
                 s1 = value.getNumber(); // тогда мы присваиваем переменной s1 номер этого энама
              break;
@@ -180,7 +182,7 @@ public class Main {
 
         }
 
-        for (Rim value : Rim.values()){ // проходимся по массиву энами и присваиваем эти значения в переменную value, которую создали
+        for (RimEnum value : RimEnum.values()){ // проходимся по массиву энами и присваиваем эти значения в переменную value, которую создали
             if (n2.equals(value.name())){ //если n1 = названию энама
                 s2 = value.getNumber();  // тогда мы присваиваем переменной s1 номер этого энама
                 break;
@@ -214,7 +216,7 @@ public class Main {
             throw new NotMathOperException();
         }
 
-      for (Rim r: Rim.values()){
+      for (RimEnum r: RimEnum.values()){
          if ( r.getNumber() == Integer.parseInt(answer)){
              return r.name();
 
