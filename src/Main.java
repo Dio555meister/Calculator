@@ -24,17 +24,13 @@ public class Main {
         for ( char c : arr){
             if (c == '+' ||c == '-' || c =='/'|| c =='*'){
                countOperand++;
+                operand = c;
             }
             if (countOperand>1){
                 throw  new WrongFormatException();
             }
         }
 
-        for (char c : arr) { //проходимся циклом по массиву
-            if (c == '+' ||c == '-' || c =='/'|| c =='*'){ // если встречается один из этих символов
-                operand = c; // присваиваем в операнд этот символ
-            }
-        }
 
         if (operand == ' '){
             throw new NotMathOperException();
@@ -63,6 +59,9 @@ public class Main {
         if (c.length<3){
             throw new NotMathOperException();
         }
+
+
+
         String operand = String.valueOf(c[2]); // делаем из арифм  символа массива строку и присваиваем переменной операнд
 
         if (Character.isDigit(c[0])) { // проверяет, является ли  первый символ числом
